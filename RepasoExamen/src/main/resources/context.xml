@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="email2" class="demo.modelo.entidad.Email" scope="singleton">
+		<property name="id" value="2"></property>
+		<property name="remitente" value="Jorge G"></property>
+		<property name="destinatario" value="Jaime O"></property>
+	</bean>
+
+	<bean id="email3" class="demo.modelo.entidad.Email" scope="singleton">
+		<property name="id" value="3"></property>
+		<property name="remitente" value="Jorge N"></property>
+		<property name="destinatario" value="Jaime R"></property>
+	</bean>
+	
+	<bean id="autor2" class="demo.modelo.entidad.Autor" scope="singleton">
+		<property name="id" value="2"></property>
+		<property name="nombre" value="CCCC"></property>
+		<property name="edad" value="80"></property>
+	</bean>
+	
+	<bean id="autor3" class="demo.modelo.entidad.Autor" scope="singleton">
+		<property name="id" value="3"></property>
+		<property name="nombre" value="DDDD"></property>
+		<property name="edad" value="99"></property>
+	</bean>
+	
+	<bean id="autor1" class="demo.modelo.entidad.Autor" scope="singleton">
+		<property name="id" value="1"></property>
+		<property name="nombre" value="AAAA"></property>
+		<property name="edad" value="90"></property>
+	</bean>
+	
+	<bean id="libro2" class="demo.modelo.entidad.Libro" scope="singleton" autowire="byName">
+		<property name="isbn" value="C"></property>
+		<property name="editorial" value="C"></property>
+	</bean>
+	
+	<bean id="libro3" class="demo.modelo.entidad.Libro" scope="singleton" autowire="byName">
+		<property name="isbn" value="D"></property>
+		<property name="editorial" value="D"></property>
+	</bean>
+
+</beans>

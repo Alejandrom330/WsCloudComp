@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="motor1" class="demo.modelo.entidad.Motor">
+		<property name="cv" value="10"></property>
+		<property name="cilindrada" value="1000"></property>
+	</bean>
+	
+	<bean id="motor2" class="demo.modelo.entidad.Motor">
+		<property name="cv" value="5"></property>
+		<property name="cilindrada" value="500"></property>
+	</bean>
+	
+	<bean id="motor3" class="demo.modelo.entidad.Motor">
+		<property name="cv" value="20"></property>
+		<property name="cilindrada" value="2000"></property>
+	</bean>
+	
+	<bean id="motor4" class="demo.modelo.entidad.Motor">
+		<property name="cv" value="15"></property>
+		<property name="cilindrada" value="1500"></property>
+	</bean>
+	
+	<bean id="motoresAvion1" class="java.util.LinkedList">
+		<constructor-arg>
+			<list>
+				<ref bean="motor1"/>
+				<ref bean="motor3"/>
+				<ref bean="motor2"/>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="motoresAvion2" class="java.util.LinkedList">
+		<constructor-arg>
+			<list>
+				<ref bean="motor4"/>
+				<ref bean="motor2"/>
+				<ref bean="motor1"/>
+				<ref bean="motor3"/>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="avion1" class="demo.modelo.entidad.Avion">
+		<property name="id" value="1"></property>
+		<property name="marca" value="Josue"></property>
+		<property name="kilometros" value="50"></property>
+		<property name="motores" ref="motoresAvion1"></property>
+	</bean>
+
+	<bean id="avion2" class="demo.modelo.entidad.Avion">
+		<property name="id" value="2"></property>
+		<property name="marca" value="Jumael"></property>
+		<property name="kilometros" value="300"></property>
+		<property name="motores" ref="motoresAvion2"></property>
+	</bean>
+
+</beans>

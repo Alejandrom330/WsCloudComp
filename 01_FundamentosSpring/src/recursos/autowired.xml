@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Autowired es una poderosa manera de inyectar objetos en java -->
+
+	<bean id="direcion" class="entidades.Direccion">
+		<property name="tipoVia" value="Avenida"></property>
+		<property name="nombreVia" value="Luna"></property>
+		<property name="ciudad" value="Tierra"></property>
+	</bean>
+	
+	<bean id="direccion2" class="entidades.Direccion">
+		<property name="tipoVia" value="Avenida"></property>
+		<property name="nombreVia" value="Marte"></property>
+		<property name="ciudad" value="Galaxia"></property>
+	</bean>
+	
+	<!-- En vez de decir a spring que meta la direccion1 mediate propertie o mediante el constructor, podemos decirle a spring
+	que busque un objeto de ese tipo de manera automatica y que lo inyecte, eso se hace poniendo un autowired. 
+	
+	Hay 2 tipos principales: 
+	"byType" spring busca un objeto de tipo direccion y se lo inyecta
+	
+	Si hubiera 2 candidatos a inyectar (mismo tipo), daria error
+	
+	El otro tipo de autowired es "byName", en caso de que eligamos esta opcion buscara un ID de bean cuyo ID coincida con el 
+	nombre (name) de la propiedad. En este ejemplo cual es el nombre de la propiedad que quiero inyectar? La propiedad seria
+	"direcion", pues bien, Spring busca un id de objeto que sea "direcion"
+	 -->
+	
+	<bean id="persona1" class="entidades.Persona" autowire="byName">
+		<property name="nombre" value="Son Goku"></property>
+		
+	</bean>
+	
+	
+</beans>

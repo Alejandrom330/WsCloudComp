@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="propietario" class="ejercicioCasa.Persona">
+		<property name="nombre" value="Godofredo"></property>
+		<property name="edad" value="54"></property>
+		<property name="dni" value="12345678A"></property>
+	</bean>
+	
+	<bean id="direccion" class="ejercicioCasa.Direccion">
+		<property name="nombreVia" value="ViaNueva"></property>
+		<property name="tipoVia" value="Calle"></property>
+		<property name="cp" value="23901"></property>
+	</bean>
+	
+	<bean id="salon" class="ejercicioCasa.Habitacion">
+		<property name="m2" value="20.2"></property>
+		<property name="tipoHabitacion">
+			<bean class="ejercicioCasa.TipoHabitacion">
+				<property name="salon" value="Salon"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="cocina" class="ejercicioCasa.Habitacion">
+		<property name="m2" value="18.5"></property>
+		<property name="tipoHabitacion">
+			<bean class="ejercicioCasa.TipoHabitacion">
+				<property name="cocina" value="Cocina"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="banio1" class="ejercicioCasa.Habitacion">
+		<property name="m2" value="9.9"></property>
+		<property name="tipoHabitacion">
+			<bean class="ejercicioCasa.TipoHabitacion">
+				<property name="banio" value="Baño"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="banio2" class="ejercicioCasa.Habitacion">
+		<property name="m2" value="6.3"></property>
+		<property name="tipoHabitacion">
+			<bean class="ejercicioCasa.TipoHabitacion">
+				<property name="banio" value="Baño"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="dormitorio1" class="ejercicioCasa.Habitacion">
+		<property name="m2" value="15.7"></property>
+		<property name="tipoHabitacion">
+			<bean class="ejercicioCasa.TipoHabitacion">
+				<property name="dormitorio" value="Dormitorio"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="dormitorio2" class="ejercicioCasa.Habitacion">
+		<property name="m2" value="13.5"></property>
+		<property name="tipoHabitacion">
+			<bean class="ejercicioCasa.TipoHabitacion">
+				<property name="dormitorio" value="Dormitorio"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="dormitorio3" class="ejercicioCasa.Habitacion">
+		<property name="m2" value="19.8"></property>
+		<property name="tipoHabitacion">
+			<bean class="ejercicioCasa.TipoHabitacion">
+				<property name="dormitorio" value="Dormitorio"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="inquilino1" class="ejercicioCasa.Persona">
+		<property name="nombre" value="Muriel"></property>
+		<property name="edad" value="78"></property>
+		<property name="dni" value="23456789L"></property>
+	</bean>
+	
+	<bean id="inquilino2" class="ejercicioCasa.Persona">
+		<property name="nombre" value="Eustaquio"></property>
+		<property name="edad" value="80"></property>
+		<property name="dni" value="23456789Q"></property>
+	</bean>
+	
+	<bean id="inquilino3" class="ejercicioCasa.Persona">
+		<property name="nombre" value="Agallas"></property>
+		<property name="edad" value="60"></property>
+		<property name="dni" value="23456789S"></property>
+	</bean>
+	
+	<bean id="listaHabitaciones" class="java.util.LinkedList">
+		<constructor-arg>
+			<list>
+				<ref bean="salon"/>
+				<ref bean="cocina"/>
+				<ref bean="banio1"/>
+				<ref bean="banio2"/>
+				<ref bean="dormitorio1"/>
+				<ref bean="dormitorio2"/>
+				<ref bean="dormitorio3"/>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="listaInquilinos" class="java.util.LinkedList">
+		<constructor-arg>
+			<list>
+				<ref bean="inquilino1"/>
+				<ref bean="inquilino2"/>
+				<ref bean="inquilino3"/>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="casa" class="ejercicioCasa.Casa">
+		<property name="propietario" ref="propietario"></property>
+		<property name="precio" value="152000.00"></property>
+		<property name="direccion" ref="direccion"></property>
+		<property name="listaHabitaciones" ref="listaHabitaciones"></property>
+		<property name="listaInquilinos" ref="listaInquilinoss"></property>
+	</bean>
+	                                
+</beans>
