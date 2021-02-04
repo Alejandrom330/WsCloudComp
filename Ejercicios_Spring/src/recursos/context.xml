@@ -16,67 +16,39 @@
 		<property name="cp" value="23901"></property>
 	</bean>
 	
-	<bean id="salon" class="ejercicioCasa.Habitacion">
+	<bean id="salon" class="ejercicioCasa.Habitaciones">
 		<property name="m2" value="20.2"></property>
-		<property name="tipoHabitacion">
-			<bean class="ejercicioCasa.TipoHabitacion">
-				<property name="salon" value="Salon"></property>
-			</bean>
-		</property>
+		<property name="tipoHabitacion" value="Salon"></property>
 	</bean>
 	
-	<bean id="cocina" class="ejercicioCasa.Habitacion">
+	<bean id="cocina" class="ejercicioCasa.Habitaciones">
 		<property name="m2" value="18.5"></property>
-		<property name="tipoHabitacion">
-			<bean class="ejercicioCasa.TipoHabitacion">
-				<property name="cocina" value="Cocina"></property>
-			</bean>
-		</property>
+		<property name="tipoHabitacion" value="Cocina"></property>
 	</bean>
 	
-	<bean id="banio1" class="ejercicioCasa.Habitacion">
+	<bean id="banio1" class="ejercicioCasa.Habitaciones">
 		<property name="m2" value="9.9"></property>
-		<property name="tipoHabitacion">
-			<bean class="ejercicioCasa.TipoHabitacion">
-				<property name="banio" value="Baño"></property>
-			</bean>
-		</property>
+		<property name="tipoHabitacion" value="Baño"></property>
 	</bean>
 	
-	<bean id="banio2" class="ejercicioCasa.Habitacion">
+	<bean id="banio2" class="ejercicioCasa.Habitaciones">
 		<property name="m2" value="6.3"></property>
-		<property name="tipoHabitacion">
-			<bean class="ejercicioCasa.TipoHabitacion">
-				<property name="banio" value="Baño"></property>
-			</bean>
-		</property>
+		<property name="tipoHabitacion" value="Baño"></property>
 	</bean>
 	
-	<bean id="dormitorio1" class="ejercicioCasa.Habitacion">
+	<bean id="dormitorio1" class="ejercicioCasa.Habitaciones">
 		<property name="m2" value="15.7"></property>
-		<property name="tipoHabitacion">
-			<bean class="ejercicioCasa.TipoHabitacion">
-				<property name="dormitorio" value="Dormitorio"></property>
-			</bean>
-		</property>
+		<property name="tipoHabitacion" value="Dormitorio"></property>
 	</bean>
 	
-	<bean id="dormitorio2" class="ejercicioCasa.Habitacion">
+	<bean id="dormitorio2" class="ejercicioCasa.Habitaciones">
 		<property name="m2" value="13.5"></property>
-		<property name="tipoHabitacion">
-			<bean class="ejercicioCasa.TipoHabitacion">
-				<property name="dormitorio" value="Dormitorio"></property>
-			</bean>
-		</property>
+		<property name="tipoHabitacion" value="Dormitorio"></property>
 	</bean>
 	
-	<bean id="dormitorio3" class="ejercicioCasa.Habitacion">
+	<bean id="dormitorio3" class="ejercicioCasa.Habitaciones">
 		<property name="m2" value="19.8"></property>
-		<property name="tipoHabitacion">
-			<bean class="ejercicioCasa.TipoHabitacion">
-				<property name="dormitorio" value="Dormitorio"></property>
-			</bean>
-		</property>
+		<property name="tipoHabitacion" value="Dormitorio"></property>
 	</bean>
 	
 	<bean id="inquilino1" class="ejercicioCasa.Persona">
@@ -97,7 +69,7 @@
 		<property name="dni" value="23456789S"></property>
 	</bean>
 	
-	<bean id="listaHabitaciones" class="java.util.LinkedList">
+	<bean id="listaHabitaciones" class="java.util.ArrayList">
 		<constructor-arg>
 			<list>
 				<ref bean="salon"/>
@@ -111,7 +83,7 @@
 		</constructor-arg>
 	</bean>
 	
-	<bean id="listaInquilinos" class="java.util.LinkedList">
+	<bean id="listaInquilinos" class="java.util.ArrayList">
 		<constructor-arg>
 			<list>
 				<ref bean="inquilino1"/>
@@ -126,7 +98,7 @@
 		<property name="precio" value="152000.00"></property>
 		<property name="direccion" ref="direccion"></property>
 		<property name="listaHabitaciones" ref="listaHabitaciones"></property>
-		<property name="listaInquilinos" ref="listaInquilinoss"></property>
+		<property name="listaInquilinos" ref="listaInquilinos"></property>
 	</bean>
 	                                
 </beans>

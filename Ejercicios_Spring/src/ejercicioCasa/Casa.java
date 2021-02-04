@@ -65,8 +65,8 @@ public class Casa {
 	
 	@Override
 	public String toString() {
-		return "El propietario de la casa es: " + propietario + ", tiene un precio de " + precio + "€, se encuentra en: " 
-	+ direccion + ". las habitaciones son: " + listaHabitaciones + ", y los inquilinos son: " + listaInquilinos;
+		return "El propietario de la casa es: " + propietario + ", tiene un precio de " + precio + "€ y se encuentra en: " 
+	+ direccion + ".\nLas habitaciones son: " + listaHabitaciones + ", y los inquilinos son: " + listaInquilinos;
 	}
 
 	public double calcularM2() {

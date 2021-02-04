@@ -5,6 +5,10 @@ public class Habitaciones {
 	private TipoHabitacion tipoHabitacion;
 	private double m2;
 	
+	public Habitaciones() {
+		super();
+	}
+
 	public Habitaciones(TipoHabitacion tipoHabitacion, double m2) {
 		this.tipoHabitacion = tipoHabitacion;
 		this.m2 = m2;

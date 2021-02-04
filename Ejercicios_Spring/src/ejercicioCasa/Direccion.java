@@ -6,6 +6,10 @@ public class Direccion {
 	private String tipoVia;
 	private String cp;
 	
+	public Direccion() {
+		super();
+	}
+
 	public Direccion(String nombreVia, String tipoVia, String cp) {
 		this.nombreVia = nombreVia;
 		this.tipoVia = tipoVia;

@@ -6,6 +6,10 @@ public class Persona {
 	private int edad;
 	private String dni;
 	
+	public Persona() {
+		super();
+	}
+
 	public Persona(String nombre, int edad, String dni) {
 		this.nombre = nombre;
 		this.edad = edad;
