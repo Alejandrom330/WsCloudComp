@@ -34,7 +34,6 @@ public class AplicacionPedidos {
 		
 		c2.setPedido(p);
 		
-		
 		System.out.println(c2);
 	}
 

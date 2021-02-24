@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- thymeleaf es un motor de creacion de paginas web 
+dinamicas, que nos permite escribir paginas web en funcion
+de los datos que me envie el controlador -->
+<head>
+<meta charset="UTF-8">
+<title>INICIO</title>
+</head>
+<body>
+	<h1 style="color:blue">BIENVENIDOS A NUESTRA WEB</h1>
+	<!-- Ahora ponemos entre ${} el nombre del atributo
+	que hemos cargado en el controlador dentro del objeto
+	Model -->
+	<p th:text="'Hola ' + ${nombreUsuario}"></p>
+	<form action="buscarId" method="post">
+		Id: <input type="number" value="1" min="1" max="4" name="id"/>
+		<br/>
+		<br/>
+		<input type="submit" value="Buscar por ID"/>	
+	</form> 
+	
+	<!-- 
+	Para una lista de objetos.
+	lista -> nombre del atributo del objeto Model que hemos puesto en el controlador
+	valor -> cada uno de los valores que tiene la lista,equivalete a un for each de java
+	Ej:
+	for(String valor : lista){
+		System.out.println(valor);
+	}
+	-->
+	
+	
+	<h3 style="color:red" th:each="valor : ${listaVideojuegos}">
+		<span th:text="${valor.id}"></span>
+    	<span th:text="${valor.nombre}"></span>
+    	<span th:text="${valor.company}"></span>
+	</h3>
+</body>
+</html>

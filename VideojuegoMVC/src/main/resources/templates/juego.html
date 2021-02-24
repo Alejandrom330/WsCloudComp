@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- thymeleaf es un motor de creacion de paginas web 
+dinamicas, que nos permite escribir paginas web en funcion
+de los datos que me envie el controlador -->
+<head>
+<meta charset="UTF-8">
+<title>Lista de Videojuegos</title>
+</head>
+<body>
+	<h3 style="color:red" >
+		<span th:text="${juego.id}"></span>
+    	<span th:text="${juego.nombre}"></span>
+    	<span th:text="${juego.company}"></span>
+	</h3>
+</body>
+</html>
